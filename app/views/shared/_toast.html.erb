@@ -1,0 +1,20 @@
+<script>
+  const notifications = <%= toast_props.to_json.html_safe %>;
+
+  window.onload = (e) => {
+    console.log(notifications[0]?.message)
+    notifications.forEach(({ message, type }) => {
+      switch (type) {
+      case 'success':
+        toast.success(`🏆 ${message}`);
+        break;
+      case 'warning':
+        toast.warning(`ℹ️ ${message}`);
+        break;
+      case 'error':
+        toast.error(`❌ ${message}`);
+        break;
+      }
+    })
+  }
+</script>

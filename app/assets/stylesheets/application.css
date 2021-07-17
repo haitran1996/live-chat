@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -150px;
+}
+
+.footer-above {
+  background-color:#FF5C87;
+  padding: 1rem;
+}
+
+.footer-below {
+  padding: 1rem;
+}
+
+footer {
+  height: 150px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+  overflow: hidden;
+}
