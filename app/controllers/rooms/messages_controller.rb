@@ -7,7 +7,7 @@ class Rooms::MessagesController < ApplicationController
     @messages = @room.messages
     respond_to do |format|
       format.html
-      format.json { render json: @messages.to_json(include: %i[receiver], methods: %i[time_ago_in_words]), status: :ok }
+      format.json { render json: @messages.to_json(include: %i[receiver sender], methods: %i[time_ago_in_words]), status: :ok }
     end
   end
 
@@ -26,7 +26,8 @@ class Rooms::MessagesController < ApplicationController
 
   # POST /messages or /messages.json
   def create
-    @message = Message.new(message_params)
+    @message = @room.messages.new(message_params)
+    @message.sender_id = current_user.id
 
     respond_to do |format|
       if @message.save

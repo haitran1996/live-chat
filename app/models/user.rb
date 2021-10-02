@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
   
-  has_many :messages, as: :sender
+  has_many :messages, foreign_key: 'sender_id', class_name: 'Message'
   has_many :assignments
   has_many :rooms, through: :assignments
 

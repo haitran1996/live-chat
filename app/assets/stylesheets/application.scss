@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+// $themeColor: #007bff;
+
 html, body {
   height: 100%;
 }
@@ -33,19 +36,4 @@ html, body {
 
 footer {
   height: 150px;
-}
-
-.container {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  background-color: #fff;
-  overflow: hidden;
-}
-
-.room-container,
-.room-header,
-.room-body,
-.room-footer {
-  border: 1px solid #FF5C87;
 }

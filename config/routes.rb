@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :dash_board, only: %i[index]
   resources :rooms do
     resources :messages, module: :rooms, format: :json
+    resources :users, module: :rooms, format: :json
   end
   resources :assignments
 
