@@ -42,3 +42,10 @@ footer {
   background-color: #fff;
   overflow: hidden;
 }
+
+.room-container,
+.room-header,
+.room-body,
+.room-footer {
+  border: 1px solid #FF5C87;
+}

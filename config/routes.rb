@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :dash_board, only: %i[index]
+  resources :rooms do
+    resources :messages, module: :rooms, format: :json
+  end
+  resources :assignments
 
-  root to: 'dash_board#index'
+  root to: 'rooms#index'
 end

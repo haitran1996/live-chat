@@ -12,6 +12,7 @@ import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
+import { Room } from '../components/Room'
 
 Rails.start()
 Turbolinks.start()
