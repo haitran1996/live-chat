@@ -1,1 +1,1 @@
-= react_component("Room", @room.to_json.html_safe)
+= react_component("Room", room_props(@room).to_json.html_safe, { class: 'chat-space' })

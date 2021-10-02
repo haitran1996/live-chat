@@ -7,9 +7,14 @@ export default class MessageForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      body: null,
+      body: '',
       formData: new FormData(),
     }
+  }
+  onChange = ({ target: { value: body } }) => {
+    this.setState({
+      body: body
+    })
   }
   setFormData = () => {
     const { roomId } = this.props;
@@ -27,7 +32,7 @@ export default class MessageForm extends React.Component {
   clearForm = () => {
     this.setState({
       formData: new FormData(),
-      body: null,
+      body: '',
     })
   }
   submit = event => {
@@ -48,8 +53,8 @@ export default class MessageForm extends React.Component {
 
     return (
       <Form onSubmit={this.submit} className="d-flex">
-        <Input placeholder="Type your message here..." value={body}/>
-        <Button className="btn btn-secondary">
+        <Input placeholder="Type your message here..." value={body} onChange={this.onChange} autoFocus/>
+        <Button className="btn btn-light message-button">
           <i className="far fa-paper-plane"></i>
           Send
         </Button>

@@ -1,5 +1,5 @@
 class Message < ApplicationRecord
-  # belongs_to :sender, polymorphic: true
+  belongs_to :sender, class_name: 'User'
   belongs_to :receiver, polymorphic: true
 
   def time_ago_in_words

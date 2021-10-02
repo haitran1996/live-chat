@@ -1,3 +1,22 @@
 // Place all the styles related to the Rooms controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.chat-space {
+  height: 100%;
+}
+
+.room-name {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.assignments {
+  font-size: 18px;
+  color: #000000;
+}
+
+.message-button {
+  background-color: #007bff;
+  color: #ffffff;
+}
